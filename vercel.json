@@ -1,10 +1,5 @@
 {
-    "builds": [
-      { "src": "public/index.php", "use": "@vercel/php" },
-      { "src": "public/build/**/*", "use": "@vercel/static" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "public/index.php" }
-    ]
+    "builds": [{ "src": "dist/**", "use": "@vercel/static" }],
+    "routes": [{ "src": "/(.*)", "dest": "/dist/$1" }]
   }
   
